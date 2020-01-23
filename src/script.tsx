@@ -1,6 +1,7 @@
  const requestGetGare = async(searchParam) => {
+     var response: any;
     try {
-        var response = await fetch(`https://ressources.data.sncf.com/api/records/1.0/search/?dataset=referentiel-gares-voyageurs&q=${searchParam}`);
+        response = await fetch(`https://ressources.data.sncf.com/api/records/1.0/search/?dataset=referentiel-gares-voyageurs&q=${searchParam}`);
 
     } catch (error) {
         console.log(" fetch failes");

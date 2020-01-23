@@ -3,10 +3,10 @@ import PropTypes from "prop-types";
 import md5 from "js-md5";
 import { InputEmail } from "./inputMailSearch";
 
-export default class UserPanel extends Component{
+export default class UserPanel extends Component<any, any>{
 
-    constructor() {
-        super();
+    constructor(props) {
+        super(props);
         this.state = {
 
         };

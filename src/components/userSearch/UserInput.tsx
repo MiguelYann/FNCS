@@ -3,10 +3,10 @@ import DisplaySearch from "../displayListsearch/DisplaySearch";
 import './UserInput.css';
 import requestGetGare from '../../script';
 
-export default class UserInput extends Component {
+export default class UserInput extends Component<any, any> {
 
-  constructor() {
-    super();
+  constructor(props) {
+    super(props);
     this.state = {
       datas: [],
       search: ''
