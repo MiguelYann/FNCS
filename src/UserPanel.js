@@ -1,32 +1,29 @@
-import React from "react";
+import React, {Component} from "react";
 import PropTypes from "prop-types";
 import md5 from "js-md5";
+import { InputEmail } from "./inputMailSearch";
 
-UserPanel.propTypes = {
-    nom: PropTypes.string.isRequired,
-    prenom: PropTypes.string.isRequired,
-    email: PropTypes.string.isRequired
-};
+export default class UserPanel extends Component{
 
-UserPanel.defaultProps = {
-    nom: "Miguel",
-    prenom: "Yann",
-    email: "baptiste.lecocq@gmail"
-};
+    constructor() {
+        super();
+        this.state = {
 
-export default function UserPanel(props) {
-    return (
-        <div>
-            <p>{props.nom}</p>
-            <p>{props.prenom}</p>
-            <p>{props.email}</p>
+        };
+    }
+    render () {
+      return ( <div>
+        <InputEmail />
+            <p>{this.props.nom}</p>
+            <p>{this.props.prenom}</p>
+            <p>{this.props.email}</p>
             <img
-                src={"https://www.gravatar.com/avatar/" + md5(props.email)}
+                src={"https://www.gravatar.com/avatar/" + md5(this.props.email)}
                 alt="img"
             />
         </div>
     );
-}
+}}
 
 // export default function UserPanel({nom, prenom,email}) {
 

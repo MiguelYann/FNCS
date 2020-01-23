@@ -14,7 +14,8 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "e2e": "cypress run --headless"
   },
   "eslintConfig": {
     "extends": "react-app"
@@ -31,5 +32,8 @@
       "last 1 safari version"
     ]
   },
-  "homepage": "https://MiguelYann.github.io/FNCS/build"
+  "homepage": "https://MiguelYann.github.io/FNCS/build",
+  "devDependencies": {
+    "cypress": "3.8.2"
+  }
 }

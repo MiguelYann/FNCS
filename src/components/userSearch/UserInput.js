@@ -25,7 +25,7 @@ export default class UserInput extends Component {
         <div className='main'>
           <div className="form-group has-search">
             <span className="fa fa-search form-control-feedback"></span>
-            <input type="search" class="form-control" placeholder="Entrer votre ville"
+            <input type="search" className="form-control" placeholder="Entrer votre ville"
               onChange={event => this.setState({ search: event.target.value })}
             />
           </div>
