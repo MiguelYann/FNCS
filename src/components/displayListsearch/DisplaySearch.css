@@ -1,0 +1,7 @@
+.search-list {
+    width: 75vw;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 0.5fr 0.5fr 0.5fr 0.5fr;
+    grid-gap: 20px;
+  }

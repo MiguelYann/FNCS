@@ -1,4 +1,4 @@
-const requestGetGare = async(searchParam) => {
+ const requestGetGare = async(searchParam) => {
     try {
         var response = await fetch(`https://ressources.data.sncf.com/api/records/1.0/search/?dataset=referentiel-gares-voyageurs&q=${searchParam}`);
 
@@ -18,3 +18,5 @@ const requestGetGare = async(searchParam) => {
 
 requestGetGare("lill")
     .then(data => console.log(data));
+
+export default requestGetGare;

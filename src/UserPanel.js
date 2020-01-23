@@ -1,31 +1,34 @@
-import React from 'react';
-import PropTypes from 'prop-types';
-import md5 from 'js-md5';
+import React from "react";
+import PropTypes from "prop-types";
+import md5 from "js-md5";
 
 UserPanel.propTypes = {
     nom: PropTypes.string.isRequired,
     prenom: PropTypes.string.isRequired,
-    email: PropTypes.string.isRequired,
-}
+    email: PropTypes.string.isRequired
+};
+
 UserPanel.defaultProps = {
-    nom: 'Miguel',
-    prenom: 'Yann',
-    email: 'baptiste.lecocq@gmail'}
-export default function UserPanel(props){
-    
-   
-    return (<div>
-        <p>{props.nom}</p>
-        <p>{props.prenom}</p>
-        <p>{props.email}</p>
-        <img src={"https://www.gravatar.com/avatar/"+md5(props.email)} alt="img"/>
+    nom: "Miguel",
+    prenom: "Yann",
+    email: "baptiste.lecocq@gmail"
+};
 
-    </div>)
+export default function UserPanel(props) {
+    return (
+        <div>
+            <p>{props.nom}</p>
+            <p>{props.prenom}</p>
+            <p>{props.email}</p>
+            <img
+                src={"https://www.gravatar.com/avatar/" + md5(props.email)}
+                alt="img"
+            />
+        </div>
+    );
 }
-
 
 // export default function UserPanel({nom, prenom,email}) {
-   
 
 //         return React.createElement('div',{}, null,
 //         React.createElement('p',  {style: { color: 'black'}}, 'First Name: '+ nom),
@@ -34,4 +37,3 @@ export default function UserPanel(props){
 //         React.createElement('img',  { src :'https://www.gravatar.com/avatar/'+md5(email) }, null),
 //         );
 //     }
-
