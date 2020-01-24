@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import DisplaySearch from "../displayListsearch/DisplaySearch";
 import './UserInput.css';
 import requestGetGare from '../../script';
+import {Router} from "react-router";
 
 export default class UserInput extends Component<any, any> {
 
@@ -22,6 +23,7 @@ export default class UserInput extends Component<any, any> {
   render() {
     return (
       <div>
+
         <div className='main'>
           <div className="form-group has-search">
             <span className="fa fa-search form-control-feedback"></span>

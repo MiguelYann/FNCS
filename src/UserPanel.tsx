@@ -2,6 +2,9 @@ import React, {Component} from "react";
 import PropTypes from "prop-types";
 import md5 from "js-md5";
 import { InputEmail } from "./inputMailSearch";
+import {BrowserRouter as Router, Link, Route} from "react-router-dom";
+import Home from "./components/home/Home.component";
+import Contact from "./components/contact/Contact.component";
 
 export default class UserPanel extends Component<any, any>{
 
@@ -12,8 +15,11 @@ export default class UserPanel extends Component<any, any>{
         };
     }
     render () {
-      return ( <div>
-        <InputEmail />
+      return (
+          <Router>
+
+          <div>
+          <InputEmail />
             <p>{this.props.nom}</p>
             <p>{this.props.prenom}</p>
             <p>{this.props.email}</p>
@@ -22,6 +28,13 @@ export default class UserPanel extends Component<any, any>{
                 alt="img"
             />
         </div>
+              <Route path={'/home'} component={Home} />
+              <Route exact path={'/contact'} component={Contact} />
+              <Link to={`/contact`}>Contact</Link>
+              <br/>
+              <Link to={`/home`}>Home </Link>
+
+          </Router>
     );
 }}
 
