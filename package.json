@@ -43,6 +43,6 @@
   },
   "homepage": "https://MiguelYann.github.io/FNCS/build",
   "devDependencies": {
-    "cypress": "3.8.2"
+    "cypress": "15.9.0"
   }
 }
